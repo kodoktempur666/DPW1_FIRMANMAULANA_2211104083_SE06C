@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Hitung Total Harga Pembelian</title>
+</head>
+<body>
+    <h1>Pembelian Barang</h1>
+
+    <button onclick="hitungTotal()">Hitung Total Harga</button>
+    <p id="totalHarga"></p>
+    <script>
+        var daftarBarang = [
+            { nama: 'Barang A', harga: 10000, jumlah: 5 },
+            { nama: 'Barang B', harga: 15000, jumlah: 3 },
+            { nama: 'Barang C', harga: 20000, jumlah: 2 }
+        ];
+
+
+        function hitungTotal() {
+            var total = 0;
+            for (var i = 0; i < daftarBarang.length; i++) {
+            total += daftarBarang[i].harga * daftarBarang[i].jumlah;
+            }
+            document.getElementById('totalHarga').innerText = "Total Harga Pembelian: Rp " + total.toLocaleString('id-ID');
+        }
+    </script>
+
+</body>
+</html>
